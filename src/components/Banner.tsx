@@ -18,7 +18,6 @@ export const Banner = () => {
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(requests.feachNetflixOriginals);
-      console.log(request.data.result);
 
       //apiからランダムで値を取得している
       setMovie(request.data.results[Math.floor(Math.random() * request.data.results.length - 1)]);
